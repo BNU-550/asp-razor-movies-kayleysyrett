@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+﻿using ASP_MVC_Movies.Models;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -12,5 +13,7 @@ namespace ASP_MVC_Movies.Data
             : base(options)
         {
         }
+
+        public DbSet<Movie> Movies { get; set; }
     }
 }
